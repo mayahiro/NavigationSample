@@ -1,10 +1,16 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import {Button, Text, View} from 'react-native';
 
-const HomeScreen: React.FC = () => {
+const HomeScreen: React.FC = props => {
   return (
     <View>
       <Text>HomeScreen</Text>
+      <Button
+        onPress={() => {
+          props.navigation.navigate('Modal');
+        }}
+        title="Modal"
+      />
     </View>
   );
 };
